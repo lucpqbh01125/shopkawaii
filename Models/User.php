@@ -15,10 +15,9 @@ class User {
         return $stmt->fetch();    // PDO::FETCH_ASSOC trả về mảng kết quả
     }
 
-    public function create($username, $password, $email, $full_name, $gender, $phone, $address, $role, $verify_token) {
-        $stmt = $this->conn->prepare("INSERT INTO Users (username, password, email, full_name, gender, phone, address, role, verify_token) 
-                                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        return $stmt->execute([$username, $password, $email, $full_name, $gender, $phone, $address, $role, $verify_token]);
+    public function create($username, $password, $email, $full_name, $gender, $phone, $address, $role) {
+        $stmt = $this->conn->prepare("INSERT INTO Users (username, password, email, full_name, gender, phone, address, role) 
+                                      VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        return $stmt->execute([$username, $password, $email, $full_name, $gender, $phone, $address, $role]);
     }
-    
 }

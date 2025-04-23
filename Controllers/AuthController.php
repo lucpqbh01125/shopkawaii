@@ -65,4 +65,6 @@ class AuthController {
     public function showLogin() {
         include '../Views/Auth/login.php';
     }
+
+
 }

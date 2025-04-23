@@ -60,5 +60,5 @@
 
 <?php
 $content = ob_get_clean();
-include_once '../layouts/main.php';
+include_once '../Layouts/main.php';
 ?>
